@@ -483,6 +483,8 @@ function redredcard(data) {
         let avtorisd = JSON.parse(localStorage.getItem('avtorisd'))
         if (avtorisd[2] === id) {
             avtorisd[0] = false;
+            avtorisd[1] = '';
+            avtorisd[2] = '';
             localStorage.setItem('avtorisd', JSON.stringify(avtorisd));
             let img1 = document.querySelector('#avatar img');
             img1.src = '../../image/avatar.png';

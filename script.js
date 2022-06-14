@@ -244,7 +244,7 @@
         div.classList.add('active');
         if (avtorisd[0]) {
             let img = div.querySelector('img');
-            img.src = avtorisd[1];
+            img.src = avtorisd[1].slice(4);
         }
     }
 }
