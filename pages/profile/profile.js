@@ -32,7 +32,7 @@ let selector2d3d = '';
 
 { //разворачивание селекта 2д и 3д
     let ditem = document.querySelector('.Ditems');
-    let dbut = ditem.querySelector('.main .img');
+    let dbut = ditem.querySelector('.main');
     let acttext = ditem.querySelector('.main p')
     dbut.addEventListener('click', function() {
         ditem.classList.toggle('active')
@@ -60,10 +60,9 @@ let selector2d3d = '';
 let selectorrare = '';
 
 { //разворачивание селекта редкости
-    let cards = document.querySelector('.sec1 .cards');
 
     let ditem = document.querySelector('.raritis');
-    let dbut = ditem.querySelector('.main .img');
+    let dbut = ditem.querySelector('.main');
     let acttext = ditem.querySelector('.main p')
     dbut.addEventListener('click', function() {
         ditem.classList.toggle('active')

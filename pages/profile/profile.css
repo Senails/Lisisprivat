@@ -880,8 +880,10 @@ body main .sec1 .cards .card .text .heart {
   z-index: 2;
 }
 
-body main .sec1 .cards .card .text .heart:hover {
-  background-image: url("../../image/profile/rherat 1.png");
+@media (min-width: 1500px) {
+  body main .sec1 .cards .card .text .heart:hover {
+    background-image: url("../../image/profile/rherat 1.png");
+  }
 }
 
 body main .sec1 .cards .card .text > .menu {
@@ -918,8 +920,10 @@ body main .sec1 .cards .card .text > .menu .cat {
   background-repeat: no-repeat;
 }
 
-body main .sec1 .cards .card .text > .menu:hover .cat {
-  background-image: url("../../image/profile/rcat.png");
+@media (min-width: 1500px) {
+  body main .sec1 .cards .card .text > .menu:hover .cat {
+    background-image: url("../../image/profile/rcat.png");
+  }
 }
 
 body main .sec1 .cards .card.like .text .heart {
