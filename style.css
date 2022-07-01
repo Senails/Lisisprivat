@@ -1,13 +1,12 @@
+@charset "UTF-8";
 @font-face {
-  font-family: 'Caveat Brush';
+  font-family: "Caveat Brush";
   src: url("./fonts/CaveatBrush-Regular.ttf");
 }
-
 @font-face {
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   src: url("./fonts/Baloo2-Medium.ttf");
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +14,20 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  scrollbar-width: 0px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+  /* ширина scrollbar */
 }
 
 body {
@@ -24,12 +35,10 @@ body {
   position: relative;
   background-color: gray;
 }
-
 body a {
   text-decoration: none;
   color: white;
 }
-
 body header {
   position: absolute;
   left: calc(50% - 750px);
@@ -38,34 +47,26 @@ body header {
   z-index: 2;
   background-color: #37252C;
   border-radius: 0 0 20px 20px;
-  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
   padding: 25px 100px 0 100px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-sizing: border-box;
   display: flex;
 }
-
 body header .mobile_menu {
   position: absolute;
   opacity: 0;
 }
-
 body header .mobile_menu > * {
   display: none;
 }
-
 body header .menu {
   display: none;
 }
-
 body header .logo {
   position: absolute;
   width: 116px;
   height: 50px;
-  font-family: 'Caveat Brush';
+  font-family: "Caveat Brush";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -75,15 +76,12 @@ body header .logo {
   color: white;
   z-index: 2;
 }
-
 body header .logo span {
-  background: -webkit-gradient(linear, left top, left bottom, from(#F98801), to(rgba(255, 212, 103, 0.49)));
   background: linear-gradient(180deg, #F98801 0%, rgba(255, 212, 103, 0.49) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
 @media (min-width: 769px) and (max-width: 1500px) {
   body header .logo {
     width: 90px;
@@ -95,22 +93,16 @@ body header .logo span {
     font-size: 25px;
   }
 }
-
 body header > nav {
   margin-left: 258px;
   line-height: 50px;
   width: 650px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   z-index: 2;
 }
-
 body header > nav a {
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -118,14 +110,12 @@ body header > nav a {
   text-transform: uppercase;
   color: #FFFFFF;
 }
-
 body header > nav a:hover, body header > nav a.active {
   background: linear-gradient(355.71deg, #D26B19 2.97%, #EB9A50 96.51%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
 @media (min-width: 769px) and (max-width: 1500px) {
   body header > nav {
     margin-left: 114px;
@@ -136,11 +126,9 @@ body header > nav a:hover, body header > nav a.active {
     font-size: 15px;
   }
 }
-
 body header .avatar {
   display: none;
 }
-
 body header .avatar.active {
   display: block;
   overflow: hidden;
@@ -151,7 +139,6 @@ body header .avatar.active {
   border-radius: 50%;
   background-size: 50px 50px;
 }
-
 @media (min-width: 769px) and (max-width: 1500px) {
   body header .avatar.active {
     width: 40px;
@@ -160,11 +147,9 @@ body header .avatar.active {
     background-size: 40px 40px;
   }
 }
-
 body header .avatar.active img {
   width: 100%;
 }
-
 body header .button {
   z-index: 3;
   width: 220px;
@@ -172,11 +157,9 @@ body header .button {
   right: 100px;
   position: absolute;
 }
-
 body header .button img {
   display: none;
 }
-
 @media (max-width: 1500px) {
   body header .button {
     width: 40px;
@@ -191,11 +174,9 @@ body header .button img {
     height: 40px;
   }
   body header .button:hover {
-    -webkit-filter: drop-shadow(0px 0px 10px #FF8A00);
-            filter: drop-shadow(0px 0px 10px #FF8A00);
+    filter: drop-shadow(0px 0px 10px #FF8A00);
   }
 }
-
 body header .button:hover .shadow {
   position: absolute;
   width: 200px;
@@ -203,22 +184,18 @@ body header .button:hover .shadow {
   margin: 0 auto;
   border-radius: 50%;
   background: linear-gradient(355.71deg, #D26B19 2.97%, #EB9A50 96.51%);
-  -webkit-filter: blur(50px);
-          filter: blur(50px);
+  filter: blur(50px);
 }
-
 @media (min-width: 768px) and (max-width: 1500px) {
   body header .button:hover .shadow {
     display: none;
   }
 }
-
 @media (max-width: 768px) {
   body header .button:hover .shadow {
     display: none;
   }
 }
-
 body header .button .but {
   position: absolute;
   width: 100%;
@@ -227,21 +204,18 @@ body header .button .but {
   background: linear-gradient(355.71deg, #B85607 2.97%, #FFB168 96.51%);
   z-index: 2;
 }
-
 @media (min-width: 768px) and (max-width: 1500px) {
   body header .button .but {
     display: none;
   }
 }
-
 @media (max-width: 768px) {
   body header .button .but {
     display: none;
   }
 }
-
 body header .button .but p {
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -250,11 +224,9 @@ body header .button .but p {
   color: #181818;
   text-transform: uppercase;
 }
-
 body header .button .but p:active {
   color: white;
 }
-
 @media (min-width: 769px) and (max-width: 1500px) {
   body header {
     width: 730px;
@@ -263,14 +235,12 @@ body header .button .but p:active {
     padding: 20px 20px 0 20px;
   }
 }
-
 @media (max-width: 768px) {
   body header {
     width: 340px;
     height: 70px;
     padding: 15px 29px 0 29px;
     left: calc(50% - 170px);
-    -webkit-transition: 0.5s height;
     transition: 0.5s height;
   }
   body header .menu {
@@ -280,19 +250,14 @@ body header .button .but p:active {
     height: 40px;
     border-radius: 50%;
     background: linear-gradient(355.71deg, #D26B19 2.97%, #EB9A50 96.51%);
-    -webkit-transition: 1s -webkit-transform;
-    transition: 1s -webkit-transform;
     transition: 1s transform;
-    transition: 1s transform, 1s -webkit-transform;
   }
   body header .menu:hover {
-    -webkit-filter: drop-shadow(0px 0px 10px #FF8A00);
-            filter: drop-shadow(0px 0px 10px #FF8A00);
+    filter: drop-shadow(0px 0px 10px #FF8A00);
   }
   body header .menu.active {
     background: white;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   body header .logo {
     width: 90px;
@@ -318,38 +283,25 @@ body header .button .but p:active {
   }
   body header.active .mobile_menu {
     opacity: 1;
-    -webkit-transition: 0.1s opacity 0.5s;
     transition: 0.1s opacity 0.5s;
     width: 140px;
     height: 290px;
     top: 100px;
     left: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   body header.active .mobile_menu > nav {
     height: 220px;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
   }
   body header.active .mobile_menu > nav a {
     color: white;
     text-decoration: none;
-    font-family: 'Baloo 2';
+    font-family: "Baloo 2";
     font-weight: 600;
     font-size: 15px;
     line-height: 24px;
@@ -366,12 +318,8 @@ body header .button .but p:active {
     bottom: 0;
     height: 40px;
     width: 140px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
   body header.active .mobile_menu > div a {
     height: 40px;
@@ -380,20 +328,17 @@ body header .button .but p:active {
     background: linear-gradient(355.71deg, #D26B19 2.97%, #EB9A50 96.51%);
   }
   body header.active .mobile_menu > div a:hover {
-    -webkit-filter: drop-shadow(0px 0px 5px #FF8A00);
-            filter: drop-shadow(0px 0px 5px #FF8A00);
+    filter: drop-shadow(0px 0px 5px #FF8A00);
   }
   body header.active .mobile_menu > div a img {
     height: 40px;
     width: 40px;
   }
 }
-
 body main {
   height: 5000px;
   min-width: 350px;
 }
-
 body main > .fon {
   z-index: -1;
   position: absolute;
@@ -402,7 +347,6 @@ body main > .fon {
   width: 100%;
   height: 100%;
 }
-
 body main > .fon .fon1 {
   height: 960px;
   width: 100%;
@@ -410,7 +354,6 @@ body main > .fon .fon1 {
   background-image: url("./image/fon/forest.png");
   background-position: center;
 }
-
 body main > .fon .fon2 {
   position: absolute;
   bottom: 0;
@@ -421,7 +364,6 @@ body main > .fon .fon2 {
   background-position: top;
   background-repeat: no-repeat;
 }
-
 body main > .fon .fon3 {
   position: absolute;
   top: 1600px;
@@ -432,13 +374,11 @@ body main > .fon .fon3 {
   background-position: top;
   background-repeat: no-repeat;
 }
-
 @media (min-width: 3500px) {
   body main > .fon .fon3 {
     background-image: url("./image/fon/gorimax.png");
   }
 }
-
 body main > .fon .fon3 .fon4 {
   position: absolute;
   bottom: 0;
@@ -449,13 +389,11 @@ body main > .fon .fon3 .fon4 {
   background-position: top;
   background-repeat: no-repeat;
 }
-
 @media (max-width: 1920px) {
   body main > .fon .fon3 .fon4 {
     background-size: cover;
   }
 }
-
 body main > .fon .fon5 {
   position: absolute;
   width: 20%;
@@ -467,7 +405,6 @@ body main > .fon .fon5 {
   background-size: contain;
   background-position: left;
 }
-
 body main > .fon .fon6 {
   position: absolute;
   width: 20%;
@@ -479,13 +416,11 @@ body main > .fon .fon6 {
   background-size: contain;
   background-position: right;
 }
-
 @media (max-width: 1920px) {
   body main > .fon .fon6 {
     display: none;
   }
 }
-
 @media (min-width: 769px) and (max-width: 1500px) {
   body main {
     height: 5530px;
@@ -506,7 +441,6 @@ body main > .fon .fon6 {
     top: 1370px;
   }
 }
-
 @media (max-width: 768px) {
   body main {
     height: 6080px;
@@ -528,22 +462,19 @@ body main > .fon .fon6 {
     top: 960px;
   }
 }
-
 body main .sec1 {
   position: relative;
   z-index: 1;
   height: 1050px;
   padding-top: 215px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
 }
-
 body main .sec1 h1 {
   width: 860px;
   height: 164px;
   margin: 0 auto;
-  font-family: 'Caveat Brush';
+  font-family: "Caveat Brush";
   font-style: normal;
   font-weight: 400;
   font-size: 130px;
@@ -553,9 +484,8 @@ body main .sec1 h1 {
   text-shadow: 3px 0px 0px #000, -3px 0px 0px #000, 0px -3px 0px #000, 0px 3px 0px #000, 3px 3px 0px black, -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black;
   margin-bottom: 20px;
 }
-
 body main .sec1 p {
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 400;
   font-size: 25px;
@@ -566,7 +496,6 @@ body main .sec1 p {
   margin: 0 auto;
   margin-bottom: 50px;
 }
-
 body main .sec1 .button {
   z-index: 3;
   position: relative;
@@ -574,17 +503,14 @@ body main .sec1 .button {
   height: 116px;
   margin: 0 auto;
 }
-
 body main .sec1 .button .shadow {
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 50%;
   background: linear-gradient(355.71deg, #D26B19 2.97%, #EB9A50 96.51%);
-  -webkit-filter: blur(50px);
-          filter: blur(50px);
+  filter: blur(50px);
 }
-
 body main .sec1 .button .but {
   position: absolute;
   top: 15px;
@@ -592,10 +518,9 @@ body main .sec1 .button .but {
   width: 200px;
   height: 80px;
   background: #37252C;
-  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -603,7 +528,6 @@ body main .sec1 .button .but {
   text-transform: uppercase;
   text-align: center;
 }
-
 body main .sec1 .button .but .span1 {
   display: block;
   background: linear-gradient(355.71deg, #D26B19 2.97%, #EB9A50 96.51%);
@@ -611,20 +535,16 @@ body main .sec1 .button .but .span1 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
 body main .sec1 .button .but .span2 {
   display: none;
   color: white;
 }
-
 body main .sec1 .button .but:active .span1 {
   display: none;
 }
-
 body main .sec1 .button .but:active .span2 {
   display: block;
 }
-
 body main .sec1 .button .llapa {
   z-index: 2;
   width: 74px;
@@ -634,7 +554,6 @@ body main .sec1 .button .llapa {
   left: 0;
   background-image: url("./image/sec1/lapa.png");
 }
-
 body main .sec1 .button .rlapa {
   z-index: 2;
   width: 47px;
@@ -644,46 +563,32 @@ body main .sec1 .button .rlapa {
   right: 0;
   background-image: url("./image/sec1/rapa.png");
 }
-
 body main .sec1 .button:hover .llapa {
   background-image: url("./image/sec1/lapa1.png");
 }
-
 body main .sec1 .button:hover .rlapa {
   background-image: url("./image/sec1/rapa1.png");
 }
-
 body main .sec1 .cards {
   position: absolute;
   bottom: 10px;
   width: 100%;
   height: 310px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  justify-content: center;
+  align-items: flex-end;
   overflow: hidden;
 }
-
 body main .sec1 .cards img {
   width: 200px;
   height: 258px;
   border-radius: 30px;
   margin: 0 10px;
-  -webkit-filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.15));
 }
-
 body main .sec1 .cards img:nth-child(2n) {
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
+  transform: translateY(-50px);
 }
-
 @media (min-width: 769px) and (max-width: 1500px) {
   body main .sec1 {
     height: 900px;
@@ -692,7 +597,7 @@ body main .sec1 .cards img:nth-child(2n) {
   body main .sec1 h1 {
     width: 728px;
     height: 126px;
-    font-family: 'Caveat Brush';
+    font-family: "Caveat Brush";
     font-style: normal;
     font-weight: 400;
     font-size: 100px;
@@ -702,7 +607,7 @@ body main .sec1 .cards img:nth-child(2n) {
   }
   body main .sec1 p {
     width: 560px;
-    font-family: 'Baloo 2';
+    font-family: "Baloo 2";
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -719,7 +624,7 @@ body main .sec1 .cards img:nth-child(2n) {
     height: 70px;
   }
   body main .sec1 .button .but span {
-    font-family: 'Baloo 2';
+    font-family: "Baloo 2";
     font-style: normal;
     font-weight: 700;
     font-size: 25px;
@@ -739,19 +644,15 @@ body main .sec1 .cards img:nth-child(2n) {
     display: none;
   }
   body main .sec1 .cards img:nth-child(2n) {
-    -webkit-transform: translateY(-42px);
     transform: translateY(-42px);
   }
   body main .sec1 .cards img:nth-child(1) {
-    -webkit-transform: translateY(-42px);
-            transform: translateY(-42px);
+    transform: translateY(-42px);
   }
   body main .sec1 .cards img:nth-child(12) {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
-
 @media (max-width: 768px) {
   body main .sec1 {
     padding-top: 115px;
@@ -789,19 +690,11 @@ body main .sec1 .cards img:nth-child(2n) {
     width: 356px;
     bottom: 55px;
     left: calc(50% - 178px);
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
     overflow: visible;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: flex-start;
+    align-items: center;
   }
   body main .sec1 .cards img {
     width: 157px;
@@ -813,41 +706,30 @@ body main .sec1 .cards img:nth-child(2n) {
     display: none;
   }
   body main .sec1 .cards img:nth-child(2n) {
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
   }
   body main .sec1 .cards img:nth-child(4), body main .sec1 .cards img:nth-child(9) {
-    -webkit-transform: translateY(25px);
-            transform: translateY(25px);
+    transform: translateY(25px);
   }
 }
-
 body main .sec2 {
   height: 550px;
 }
-
 body main .sec2 .content {
   height: 100%;
   width: 1080px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 body main .sec2 .content .text {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 650px;
   height: 550px;
   padding-top: 100px;
 }
-
 body main .sec2 .content .text h2 {
-  font-family: 'Caveat Brush';
+  font-family: "Caveat Brush";
   font-style: normal;
   font-weight: 400;
   font-size: 80px;
@@ -856,35 +738,30 @@ body main .sec2 .content .text h2 {
   text-shadow: 3px 0px 0px #000, -3px 0px 0px #000, 0px -3px 0px #000, 0px 3px 0px #000, 3px 3px 0px black, -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black;
   margin-bottom: 20px;
 }
-
 body main .sec2 .content .text p {
   margin-bottom: 20px;
   color: white;
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 29px;
 }
-
 body main .sec2 .content .fox {
   position: relative;
   width: 310px;
   height: 550px;
 }
-
 body main .sec2 .content .fox .img1 {
   position: absolute;
   top: 0;
   width: 100%;
 }
-
 body main .sec2 .content .fox .img2 {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
-
 body main .sec2 .content .fox .img3 {
   position: absolute;
   width: 207px;
@@ -893,17 +770,13 @@ body main .sec2 .content .fox .img3 {
   left: 7%;
   z-index: 2;
 }
-
 @media (min-width: 769px) and (max-width: 1500px) {
   body main .sec2 {
     height: 1150px;
   }
   body main .sec2 .content {
     width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     padding-bottom: 34px;
   }
   body main .sec2 .content .text {
@@ -937,7 +810,6 @@ body main .sec2 .content .fox .img3 {
     height: 514px;
   }
 }
-
 @media (max-width: 768px) {
   body main .sec2 {
     height: 900px;
@@ -946,13 +818,8 @@ body main .sec2 .content .fox .img3 {
     padding-bottom: 55px;
     height: 100%;
     width: 350px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   body main .sec2 .content .text {
     height: 400px;
@@ -981,21 +848,18 @@ body main .sec2 .content .fox .img3 {
     height: 330px;
   }
 }
-
 body main .sec3 {
   height: 1350px;
   padding-top: 160px;
 }
-
 body main .sec3 .content {
   width: 1290px;
   height: 1120px;
   margin: 0 auto;
   position: relative;
 }
-
 body main .sec3 .content h2 {
-  font-family: 'Caveat Brush';
+  font-family: "Caveat Brush";
   font-style: normal;
   font-weight: 400;
   font-size: 80px;
@@ -1004,12 +868,10 @@ body main .sec3 .content h2 {
   text-shadow: 3px 0px 0px #000, -3px 0px 0px #000, 0px -3px 0px #000, 0px 3px 0px #000, 3px 3px 0px black, -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black;
   margin-left: 110px;
 }
-
 body main .sec3 .content .left {
   width: 510px;
   height: 850px;
 }
-
 body main .sec3 .content .left .card1 {
   position: relative;
   width: 400px;
@@ -1017,15 +879,12 @@ body main .sec3 .content .left .card1 {
   margin-left: auto;
   margin-bottom: 90px;
 }
-
 body main .sec3 .content .left .card1 img {
   position: absolute;
-  -webkit-transform: rotate(26deg);
-          transform: rotate(26deg);
+  transform: rotate(26deg);
   top: 0;
   right: 0;
 }
-
 body main .sec3 .content .left .card1 .text {
   position: absolute;
   bottom: 0;
@@ -1034,25 +893,20 @@ body main .sec3 .content .left .card1 .text {
   height: 340px;
   padding: 30px;
   background: #37252C;
-  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
-
 body main .sec3 .content .left .card2 {
   position: relative;
   width: 420px;
   height: 310px;
 }
-
 body main .sec3 .content .left .card2 img {
   position: absolute;
-  -webkit-transform: rotate(26deg);
-          transform: rotate(26deg);
+  transform: rotate(26deg);
   top: 0;
   left: 0;
 }
-
 body main .sec3 .content .left .card2 .text {
   position: absolute;
   bottom: 0;
@@ -1061,11 +915,9 @@ body main .sec3 .content .left .card2 .text {
   height: 207px;
   padding: 30px;
   background: #37252C;
-  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
-
 body main .sec3 .content .right {
   position: absolute;
   width: 410px;
@@ -1073,22 +925,18 @@ body main .sec3 .content .right {
   bottom: 0;
   right: 0;
 }
-
 body main .sec3 .content .right .card3 {
   position: relative;
   width: 410px;
   height: 350px;
   margin-bottom: 157px;
 }
-
 body main .sec3 .content .right .card3 img {
   position: absolute;
-  -webkit-transform: rotate(70deg);
-          transform: rotate(70deg);
+  transform: rotate(70deg);
   top: 0;
   right: 0;
 }
-
 body main .sec3 .content .right .card3 .text {
   position: absolute;
   bottom: 0;
@@ -1098,25 +946,20 @@ body main .sec3 .content .right .card3 .text {
   padding: 30px;
   padding-right: 0;
   background: #37252C;
-  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
-
 body main .sec3 .content .right .card4 {
   position: relative;
   width: 400px;
   height: 233px;
 }
-
 body main .sec3 .content .right .card4 img {
   position: absolute;
-  -webkit-transform: rotate(26deg);
-          transform: rotate(26deg);
+  transform: rotate(26deg);
   bottom: 0;
   right: 0;
 }
-
 body main .sec3 .content .right .card4 .text {
   position: absolute;
   top: 0;
@@ -1125,59 +968,45 @@ body main .sec3 .content .right .card4 .text {
   height: 140px;
   padding: 30px;
   background: #37252C;
-  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
-
 body main .sec3 .content .lap {
   position: absolute;
   width: 120px;
   height: 120px;
 }
-
 body main .sec3 .content .lap1 {
   top: 330px;
   left: 496px;
 }
-
 body main .sec3 .content .lap2 {
   top: 350px;
   left: 680px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-
 body main .sec3 .content .lap3 {
   top: 610px;
   left: 650px;
-  -webkit-transform: rotate(170deg);
-          transform: rotate(170deg);
+  transform: rotate(170deg);
 }
-
 body main .sec3 .content .lap4 {
   top: 626px;
   left: 456px;
-  -webkit-transform: rotate(160deg);
-          transform: rotate(160deg);
+  transform: rotate(160deg);
 }
-
 body main .sec3 .content .lap5 {
   top: 880px;
   left: 530px;
-  -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
+  transform: rotate(40deg);
 }
-
 body main .sec3 .content .lap6 {
   top: 950px;
   left: 700px;
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
+  transform: rotate(10deg);
 }
-
 body main .sec3 .content .text h3 {
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -1189,24 +1018,19 @@ body main .sec3 .content .text h3 {
   background-clip: text;
   margin-bottom: 5px;
 }
-
 body main .sec3 .content .text ul {
   list-style: none;
 }
-
 body main .sec3 .content .text ul li {
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #FFFFFF;
   margin-bottom: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 body main .sec3 .content .text ul li div {
   margin-top: 8px;
   margin-right: 10px;
@@ -1215,7 +1039,6 @@ body main .sec3 .content .text ul li div {
   background: linear-gradient(355.71deg, #D26B19 2.97%, #EB9A50 96.51%);
   border-radius: 50%;
 }
-
 @media (min-width: 769px) and (max-width: 1500px) {
   body main .sec3 {
     height: 1250px;
@@ -1244,8 +1067,7 @@ body main .sec3 .content .text ul li div {
     height: 356px;
   }
   body main .sec3 .content .left .card2 img {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
+    transform: rotate(1deg);
     top: 20px;
     left: 55px;
   }
@@ -1260,8 +1082,7 @@ body main .sec3 .content .text ul li div {
   }
   body main .sec3 .content .right .card3 img {
     top: -50px;
-    -webkit-transform: rotate(80deg);
-            transform: rotate(80deg);
+    transform: rotate(80deg);
   }
   body main .sec3 .content .right .card4 {
     position: absolute;
@@ -1274,40 +1095,34 @@ body main .sec3 .content .text ul li div {
   }
   body main .sec3 .content .right .card4 img {
     top: -25px;
-    -webkit-transform: rotate(-11deg);
-            transform: rotate(-11deg);
+    transform: rotate(-11deg);
   }
   body main .sec3 .content .lap2,
-  body main .sec3 .content .lap4,
-  body main .sec3 .content .lap5 {
+body main .sec3 .content .lap4,
+body main .sec3 .content .lap5 {
     display: none;
   }
   body main .sec3 .content .lap1 {
     top: 280px;
     left: 300px;
-    -webkit-transform: rotate(20deg);
-            transform: rotate(20deg);
+    transform: rotate(20deg);
   }
   body main .sec3 .content .lap3 {
     top: 620px;
     left: 300px;
-    -webkit-transform: rotate(140deg);
-            transform: rotate(140deg);
+    transform: rotate(140deg);
   }
   body main .sec3 .content .lap6 {
     top: 890px;
     left: 300px;
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
+    transform: rotate(30deg);
   }
 }
-
 @media (min-width: 3500px) {
   body main .sec3 {
     padding-top: 230px;
   }
 }
-
 @media (max-width: 768px) {
   body main .sec3 {
     height: 1550px;
@@ -1339,8 +1154,7 @@ body main .sec3 .content .text ul li div {
   }
   body main .sec3 .content .left .card1 img {
     left: 54px;
-    -webkit-transform: rotate(0) translateY(-30px) scale(0.8);
-            transform: rotate(0) translateY(-30px) scale(0.8);
+    transform: rotate(0) translateY(-30px) scale(0.8);
   }
   body main .sec3 .content .left .card2 {
     position: absolute;
@@ -1357,8 +1171,7 @@ body main .sec3 .content .text ul li div {
     bottom: 0;
     left: auto;
     right: 0;
-    -webkit-transform: translateY(10px) translateX(30px) rotate(0deg) scale(0.8);
-            transform: translateY(10px) translateX(30px) rotate(0deg) scale(0.8);
+    transform: translateY(10px) translateX(30px) rotate(0deg) scale(0.8);
   }
   body main .sec3 .content .right {
     width: 100%;
@@ -1374,8 +1187,7 @@ body main .sec3 .content .text ul li div {
     width: 100%;
   }
   body main .sec3 .content .right .card3 img {
-    -webkit-transform: translateY(-30px) translateX(20px) rotate(80deg) scale(0.8);
-            transform: translateY(-30px) translateX(20px) rotate(80deg) scale(0.8);
+    transform: translateY(-30px) translateX(20px) rotate(80deg) scale(0.8);
   }
   body main .sec3 .content .right .card4 {
     position: absolute;
@@ -1388,18 +1200,16 @@ body main .sec3 .content .text ul li div {
   }
   body main .sec3 .content .right .card4 img {
     left: 0;
-    -webkit-transform: rotate(-20deg) translateX(-20px) translateY(10px) scale(0.8);
-            transform: rotate(-20deg) translateX(-20px) translateY(10px) scale(0.8);
+    transform: rotate(-20deg) translateX(-20px) translateY(10px) scale(0.8);
   }
   body main .sec3 .content .lap {
     width: 90px;
     height: 90px;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   body main .sec3 .content .lap3,
-  body main .sec3 .content .lap2,
-  body main .sec3 .content .lap5 {
+body main .sec3 .content .lap2,
+body main .sec3 .content .lap5 {
     display: none;
   }
   body main .sec3 .content .lap1 {
@@ -1415,34 +1225,25 @@ body main .sec3 .content .text ul li div {
     left: 8px;
   }
 }
-
 body main .sec4 {
   height: 1000px;
   padding-top: 225px;
 }
-
 body main .sec4 .menu {
   width: 1080px;
   height: 80px;
   margin: 0 auto 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 body main .sec4 .menu .vary {
   position: relative;
   width: 200px;
   height: 80px;
   border-radius: 20px;
-  -webkit-filter: drop-shadow(0px 5px 50px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(0px 5px 50px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 5px 50px rgba(0, 0, 0, 0.25));
   background-color: white;
 }
-
 body main .sec4 .menu .vary .fon {
   position: absolute;
   top: 4px;
@@ -1452,13 +1253,12 @@ body main .sec4 .menu .vary .fon {
   background-color: #3F1D24;
   border-radius: 16px;
 }
-
 body main .sec4 .menu .vary .text {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
@@ -1467,9 +1267,7 @@ body main .sec4 .menu .vary .text {
   text-transform: uppercase;
   color: white;
 }
-
 body main .sec4 .menu .vary .shadow {
-  -webkit-transition: 0.5s opacity;
   transition: 0.5s opacity;
   position: absolute;
   top: 0;
@@ -1478,14 +1276,11 @@ body main .sec4 .menu .vary .shadow {
   border-radius: 50%;
   background: linear-gradient(355.71deg, #D26B19 2.97%, #EB9A50 96.51%);
   opacity: 0;
-  -webkit-filter: blur(50px);
-          filter: blur(50px);
+  filter: blur(50px);
 }
-
 body main .sec4 .menu .vary:hover, body main .sec4 .menu .vary.active {
   background: linear-gradient(355.71deg, #D26B19 2.97%, #EB9A50 96.51%);
 }
-
 body main .sec4 .menu .vary:hover .shadow, body main .sec4 .menu .vary.active .shadow {
   position: absolute;
   top: 0;
@@ -1494,56 +1289,42 @@ body main .sec4 .menu .vary:hover .shadow, body main .sec4 .menu .vary.active .s
   border-radius: 50%;
   background: linear-gradient(355.71deg, #D26B19 2.97%, #EB9A50 96.51%);
   opacity: 0.3;
-  -webkit-filter: blur(50px);
-          filter: blur(50px);
+  filter: blur(50px);
 }
-
 body main .sec4 .menu .vary:hover .text, body main .sec4 .menu .vary.active .text {
-  -webkit-transition: 0.5s background-color;
   transition: 0.5s background-color;
   background: linear-gradient(355.71deg, #D26B19 2.97%, #EB9A50 96.51%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
 body main .sec4 .conteiner {
   width: 1080px;
   height: 540px;
   margin: 0 auto;
   position: relative;
 }
-
 body main .sec4 .smblock {
   position: absolute;
   opacity: 1;
-  -webkit-transition: 0.5s opacity 0.2s;
   transition: 0.5s opacity 0.2s;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 1080px;
   height: 540px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 body main .sec4 .smblock .info {
   width: 420px;
   height: 536px;
   background: #37252C;
-  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   padding: 20px 30px;
 }
-
 body main .sec4 .smblock .info h1 {
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -1555,75 +1336,57 @@ body main .sec4 .smblock .info h1 {
   background-clip: text;
   margin-bottom: 10px;
 }
-
 body main .sec4 .smblock .info .name {
   width: 200px;
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 29px;
   color: #806F75;
 }
-
 body main .sec4 .smblock .info .texxt {
   width: 160px;
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 29px;
   color: #FFFFFF;
 }
-
 body main .sec4 .smblock .info .texxtbig {
   margin-bottom: 20px;
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #FFFFFF;
 }
-
 body main .sec4 .smblock .info .str1,
 body main .sec4 .smblock .info .str2,
 body main .sec4 .smblock .info .str3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
 }
-
 body main .sec4 .smblock .cards {
   width: 640px;
   height: 536px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
 }
-
 body main .sec4 .smblock .cards img {
   width: 200px;
   height: 258px;
-  -webkit-filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.15));
   border-radius: 30px;
 }
-
 body main .sec4 .smblock.none {
   opacity: 0;
-  -webkit-transition: 0.2s opacity;
   transition: 0.2s opacity;
 }
-
 @media (min-width: 769px) and (max-width: 1500px) {
   body main .sec4 {
     height: 1050px;
@@ -1632,24 +1395,21 @@ body main .sec4 .smblock.none {
   body main .sec4 .menu {
     width: 728px;
     height: 180px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-line-pack: justify;
-        align-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
     margin-bottom: 60px;
   }
   body main .sec4 .menu .vary1,
-  body main .sec4 .menu .vary2,
-  body main .sec4 .menu .vary3 {
+body main .sec4 .menu .vary2,
+body main .sec4 .menu .vary3 {
     width: 230px;
   }
   body main .sec4 .menu .vary4,
-  body main .sec4 .menu .vary5 {
+body main .sec4 .menu .vary5 {
     width: 354px;
   }
   body main .sec4 .menu .vary:hover .shadow, body main .sec4 .menu .vary.active .shadow {
-    -webkit-filter: blur(30px);
-            filter: blur(30px);
+    filter: blur(30px);
   }
   body main .sec4 .conteiner {
     width: 730px;
@@ -1679,7 +1439,6 @@ body main .sec4 .smblock.none {
     height: 218px;
   }
 }
-
 @media (max-width: 768px) {
   body main .sec4 {
     height: 1450px;
@@ -1688,10 +1447,8 @@ body main .sec4 .smblock.none {
   body main .sec4 .menu {
     height: 165px;
     width: 340px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-line-pack: justify;
-        align-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
     margin-bottom: 30px;
   }
   body main .sec4 .menu .vary {
@@ -1711,16 +1468,13 @@ body main .sec4 .smblock.none {
     font-size: 20px;
   }
   body main .sec4 .menu .vary:hover .shadow, body main .sec4 .menu .vary.active .shadow {
-    -webkit-filter: blur(30px);
-            filter: blur(30px);
+    filter: blur(30px);
   }
   body main .sec4 .menu .vary1 {
     width: 340px;
   }
   body main .sec4 .menu .vary2 {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
   body main .sec4 .conteiner {
     width: 340px;
@@ -1729,10 +1483,7 @@ body main .sec4 .smblock.none {
   body main .sec4 .smblock {
     width: 340px;
     height: 1170px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   body main .sec4 .smblock .info {
     height: 470px;
@@ -1745,7 +1496,7 @@ body main .sec4 .smblock.none {
     margin-bottom: 5px;
   }
   body main .sec4 .smblock .info .name,
-  body main .sec4 .smblock .info .texxt {
+body main .sec4 .smblock .info .texxt {
     font-style: normal;
     font-size: 18px;
     line-height: 29px;
@@ -1759,10 +1510,8 @@ body main .sec4 .smblock.none {
     margin-bottom: 10px;
   }
   body main .sec4 .smblock .info .str1,
-  body main .sec4 .smblock .info .str2,
-  body main .sec4 .smblock .info .str3 {
-    display: -webkit-box;
-    display: -ms-flexbox;
+body main .sec4 .smblock .info .str2,
+body main .sec4 .smblock .info .str3 {
     display: flex;
     margin-bottom: 10px;
   }
@@ -1776,21 +1525,18 @@ body main .sec4 .smblock.none {
     height: 206px;
   }
 }
-
 body main .sec5 {
   height: 1050px;
   padding-top: 150px;
 }
-
 body main .sec5 .content {
   width: 1140px;
   height: 710px;
   margin: 0 auto;
 }
-
 body main .sec5 .content h2 {
   margin-left: 58px;
-  font-family: 'Caveat Brush';
+  font-family: "Caveat Brush";
   font-style: normal;
   font-weight: 400;
   font-size: 80px;
@@ -1799,36 +1545,25 @@ body main .sec5 .content h2 {
   margin-bottom: 15px;
   text-shadow: 3px 0px 0px #000, -3px 0px 0px #000, 0px -3px 0px #000, 0px 3px 0px #000, 3px 3px 0px black, -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black;
 }
-
 body main .sec5 .content .grafi {
   width: 100%;
   height: 590px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 body main .sec5 .content .grafi .box1 {
   position: relative;
   width: 592px;
   height: 420px;
 }
-
 body main .sec5 .content .grafi .box1 .bigcanvas {
   width: 100%;
   height: 100%;
 }
-
 body main .sec5 .content .grafi .box1 .lowcanvas {
   display: none;
 }
-
 body main .sec5 .content .grafi .box1 .text {
   position: absolute;
   top: 105px;
@@ -1838,12 +1573,11 @@ body main .sec5 .content .grafi .box1 .text {
   border-radius: 50%;
   padding-top: 62px;
 }
-
 body main .sec5 .content .grafi .box1 .text p {
   margin: 0 auto;
   width: 150px;
   height: 78px;
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
@@ -1855,54 +1589,40 @@ body main .sec5 .content .grafi .box1 .text p {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
 body main .sec5 .content .grafi .box2 {
   width: 420px;
   height: 450px;
   border-radius: 30px;
   background: #37252C;
-  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
   padding: 20px 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 body main .sec5 .content .grafi .box2 ul {
   list-style: none;
   color: #FFFFFF;
   margin-bottom: 20px;
 }
-
 body main .sec5 .content .grafi .box2 ul li {
   margin-bottom: 9px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 body main .sec5 .content .grafi .box2 ul li .name {
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
 }
-
 body main .sec5 .content .grafi .box2 ul li .snak {
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 26px;
   margin-left: 5px;
 }
-
 body main .sec5 .content .grafi .box2 ul li div {
   width: 20px;
   height: 20px;
@@ -1911,45 +1631,34 @@ body main .sec5 .content .grafi .box2 ul li div {
   border-radius: 5px;
   border: 1px solid black;
 }
-
 body main .sec5 .content .grafi .box2 ul li .col1 {
   background: #632100;
 }
-
 body main .sec5 .content .grafi .box2 ul li .col2 {
   background: #A36C38;
 }
-
 body main .sec5 .content .grafi .box2 ul li .col3 {
   background: #CE7D07;
 }
-
 body main .sec5 .content .grafi .box2 ul li .col4 {
   background: #FFB444;
 }
-
 body main .sec5 .content .grafi .box2 ul li .col5 {
   background: #4C2A17;
 }
-
 body main .sec5 .content .grafi .box2 ul li .col6 {
   background: #69440D;
 }
-
 body main .sec5 .content .grafi .box2 ul li .col7 {
   background: #9E4A01;
 }
-
 body main .sec5 .content .grafi .box2 .boxt > p {
   height: 29px;
   margin-bottom: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 body main .sec5 .content .grafi .box2 .boxt > p .name {
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -1957,17 +1666,15 @@ body main .sec5 .content .grafi .box2 .boxt > p .name {
   color: #806F75;
   width: 50%;
 }
-
 body main .sec5 .content .grafi .box2 .boxt > p .tex {
   width: 50%;
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 29px;
   color: #FFFFFF;
 }
-
 @media (min-width: 769px) and (max-width: 1500px) {
   body main .sec5 {
     height: 1180px;
@@ -1984,29 +1691,17 @@ body main .sec5 .content .grafi .box2 .boxt > p .tex {
   }
   body main .sec5 .content .grafi {
     height: 808px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
     padding-top: 30px;
   }
   body main .sec5 .content .grafi .box2 {
     width: 730px;
     height: 295px;
     padding: 20px 30px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   body main .sec5 .content .grafi .box2 ul {
     margin: 0;
@@ -2019,7 +1714,6 @@ body main .sec5 .content .grafi .box2 .boxt > p .tex {
     height: 150px;
   }
 }
-
 @media (max-width: 768px) {
   body main .sec5 {
     height: 1180px;
@@ -2039,10 +1733,7 @@ body main .sec5 .content .grafi .box2 .boxt > p .tex {
   }
   body main .sec5 .content .grafi {
     height: 980px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   body main .sec5 .content .grafi .box1 {
     width: 335px;
@@ -2077,7 +1768,6 @@ body main .sec5 .content .grafi .box2 .boxt > p .tex {
     width: 35%;
   }
 }
-
 body footer {
   position: absolute;
   bottom: 0;
@@ -2087,18 +1777,15 @@ body footer {
   z-index: 2;
   background-color: #37252C;
   border-radius: 20px 20px 0 0;
-  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
   padding: 25px 100px 0 100px;
 }
-
 body footer .logo {
   position: absolute;
   width: 116px;
   height: 50px;
-  font-family: 'Caveat Brush';
+  font-family: "Caveat Brush";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -2107,15 +1794,12 @@ body footer .logo {
   text-transform: uppercase;
   color: white;
 }
-
 body footer .logo span {
-  background: -webkit-gradient(linear, left top, left bottom, from(#F98801), to(rgba(255, 212, 103, 0.49)));
   background: linear-gradient(180deg, #F98801 0%, rgba(255, 212, 103, 0.49) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
 @media (min-width: 769px) and (max-width: 1500px) {
   body footer .logo {
     width: 90px;
@@ -2127,21 +1811,15 @@ body footer .logo span {
     font-size: 25px;
   }
 }
-
 body footer nav {
   margin-left: 288px;
   line-height: 50px;
   width: 650px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 body footer nav a {
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -2149,14 +1827,12 @@ body footer nav a {
   text-transform: uppercase;
   color: #FFFFFF;
 }
-
 body footer nav a:hover, body footer nav a.active {
   background: linear-gradient(355.71deg, #D26B19 2.97%, #EB9A50 96.51%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
 @media (min-width: 769px) and (max-width: 1500px) {
   body footer nav {
     margin-left: 144px;
@@ -2167,21 +1843,15 @@ body footer nav a:hover, body footer nav a.active {
     font-size: 15px;
   }
 }
-
 body footer .buttons {
   width: 160px;
   height: 40px;
   position: absolute;
   right: 100px;
   top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 @media (min-width: 769px) and (max-width: 1500px) {
   body footer .buttons {
     width: 140px;
@@ -2189,23 +1859,18 @@ body footer .buttons {
     right: 20px;
   }
 }
-
 body footer .buttons div {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background: linear-gradient(355.71deg, #D26B19 2.97%, #EB9A50 96.51%);
 }
-
 body footer .buttons div img {
   border-radius: 50%;
 }
-
 body footer .buttons div:hover {
-  -webkit-filter: drop-shadow(0px 0px 10px #FF8A00);
-          filter: drop-shadow(0px 0px 10px #FF8A00);
+  filter: drop-shadow(0px 0px 10px #FF8A00);
 }
-
 @media (min-width: 769px) and (max-width: 1500px) {
   body footer {
     left: calc(50% - 365px);
@@ -2217,7 +1882,6 @@ body footer .buttons div:hover {
     display: none;
   }
 }
-
 @media (max-width: 768px) {
   body footer {
     width: 340px;
@@ -2243,7 +1907,6 @@ body footer .buttons div:hover {
     right: 20px;
   }
 }
-
 body .senails {
   position: fixed;
   z-index: 5;
@@ -2252,13 +1915,11 @@ body .senails {
   width: 5vh;
   height: 15vh;
 }
-
 @media (max-width: 768px) {
   body .senails {
     top: 35vh;
   }
 }
-
 body .senails img {
   width: 5vh;
   height: 5vh;

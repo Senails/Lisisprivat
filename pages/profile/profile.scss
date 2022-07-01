@@ -15,6 +15,16 @@
     box-sizing: border-box;
 }
 
+body {
+    scrollbar-width: 0px;
+    user-select: none;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+    /* ширина scrollbar */
+}
+
 $boder3px:3px 0px 0px #000,
 -3px 0px 0px #000,
 0px -3px 0px #000,
@@ -489,9 +499,10 @@ body {
                         }
                     }
                     .Ditems {
+                        z-index: 2;
                         overflow: hidden;
                         width: 200px;
-                        transition: 0.2s height;
+                        transition: 0.3s height;
                         height: 40px;
                         border-radius: 20px;
                         background: #37252C;
@@ -564,9 +575,10 @@ body {
                         }
                     }
                     .raritis {
+                        z-index: 2;
                         overflow: hidden;
                         width: 200px;
-                        transition: 0.2s height;
+                        transition: 0.3s height;
                         height: 40px;
                         border-radius: 20px;
                         background: #37252C;
